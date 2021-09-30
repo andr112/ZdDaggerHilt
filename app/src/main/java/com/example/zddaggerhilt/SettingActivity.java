@@ -11,6 +11,9 @@ import com.example.zddaggerhilt.databinding.ActivitySettingBinding;
 
 import javax.inject.Inject;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class SettingActivity extends AppCompatActivity {
     private ActivitySettingBinding binding;
 
@@ -21,7 +24,6 @@ public class SettingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        ((ZdApp) getApplication()).appComponent.actFactory().create().inject(this);
         Log.i("ZdTest", "sett dataRepository:" + dataRepository);
         Log.i("ZdTest", "sett dataRepository2:" + dataRepository2);
         super.onCreate(savedInstanceState);

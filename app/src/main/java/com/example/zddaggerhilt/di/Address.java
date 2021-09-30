@@ -1,10 +1,10 @@
 package com.example.zddaggerhilt.di;
 
-import com.example.zddaggerhilt.scopes.ActScope;
-
 import javax.inject.Inject;
 
-@ActScope
+import dagger.hilt.android.scopes.ActivityScoped;
+
+@ActivityScoped
 public class Address {
     @Inject
     public Address(){}

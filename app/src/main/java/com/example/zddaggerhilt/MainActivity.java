@@ -21,6 +21,9 @@ import com.google.android.material.snackbar.Snackbar;
 
 import javax.inject.Inject;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ((ZdApp) getApplication()).appComponent.actFactory().create().inject(this);
         super.onCreate(savedInstanceState);
         Log.i("ZdTest", "user:" + user);
         Log.i("ZdTest", "user:" + user2);
