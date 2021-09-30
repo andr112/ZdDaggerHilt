@@ -1,0 +1,10 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext{
+    retrofitVersion = '2.9.0'
+    okhttpLoggingVersion = '4.7.2'
+    gsonVersion = '2.8.2'
+    glideVersion = '4.10.0'
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
